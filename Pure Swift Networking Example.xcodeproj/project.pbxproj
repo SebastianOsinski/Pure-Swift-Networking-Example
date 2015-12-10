@@ -13,6 +13,7 @@
 		91DA4DB11C1A0A7B006937E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DA4DAF1C1A0A7B006937E2 /* LaunchScreen.storyboard */; };
 		91DA4DB91C1A0B49006937E2 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA4DB81C1A0B49006937E2 /* AlbumsTableViewController.swift */; };
 		91DA4DBB1C1A0B87006937E2 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA4DBA1C1A0B87006937E2 /* Album.swift */; };
+		91DA4DBD1C1A0BB0006937E2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA4DBC1C1A0BB0006937E2 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91DA4DB21C1A0A7B006937E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91DA4DB81C1A0B49006937E2 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
 		91DA4DBA1C1A0B87006937E2 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		91DA4DBC1C1A0BB0006937E2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				91DA4DB21C1A0A7B006937E2 /* Info.plist */,
 				91DA4DB81C1A0B49006937E2 /* AlbumsTableViewController.swift */,
 				91DA4DBA1C1A0B87006937E2 /* Album.swift */,
+				91DA4DBC1C1A0BB0006937E2 /* API.swift */,
 			);
 			path = "Pure Swift Networking Example";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				91DA4DA71C1A0A7B006937E2 /* AppDelegate.swift in Sources */,
 				91DA4DB91C1A0B49006937E2 /* AlbumsTableViewController.swift in Sources */,
+				91DA4DBD1C1A0BB0006937E2 /* API.swift in Sources */,
 				91DA4DBB1C1A0B87006937E2 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
