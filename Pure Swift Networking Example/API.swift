@@ -13,7 +13,6 @@ class API {
     let address = "https://itunes.apple.com/"
     let albumEndpoint = "search"
     
-    
     func fetchAlbumsForAuthor(author: String, completion: ([Album]) -> Void) {
         var fetchedAlbums = [Album]()
         
