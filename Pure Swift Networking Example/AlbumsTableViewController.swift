@@ -12,19 +12,44 @@ class AlbumsTableViewController: UITableViewController {
     
     let api = API()
     var albums = [Album]()
+    var author = "Taylor Swift"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        api.fetchAlbumsForAuthor("Taylor Swift") { [unowned self] (albums) -> Void in
+        refresh()
+    }
+    
+    func refresh() {
+        api.fetchAlbumsForAuthor(author) { [unowned self] (albums) -> Void in
             self.albums = albums
             // here our UI gets updated
             // this closure is executed on main thread
             // (we used GCD in API.swift to achieve that)
+            self.title = self.author
             self.tableView.reloadData()
         }
     }
 
+    @IBAction func searchAuthor() {
+        let ac = UIAlertController(title: "Search albums", message: "Whose albums do you want to search for?", preferredStyle: .Alert)
+        
+        ac.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Taylor Swift"
+        }
+        
+        let searchAction = UIAlertAction(title: "Search", style: .Default) { [unowned self] (_) -> Void in
+            if let author = ac.textFields?[0].text where author != "" {
+                self.author = author
+                self.refresh()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        ac.addAction(searchAction)
+        ac.addAction(cancelAction)
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
